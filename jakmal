@@ -1,0 +1,62 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbpedia: <https://dbpedia.org/resource/> .
+@prefix ex: <http://example.com/> .
+@prefix gr: <http://www.heppnetz.de/ontologies/goodrelations/v1#> .
+@prefix schema: <https://schema.org/> .
+
+## Class
+## Properties
+
+## Data 1
+ex:GudangGrosir a gr:BusinessEntity .
+dbpedia:Jakarta a gr:Location .
+ex:GudangGrosir schema:location dbpedia:Jakarta .
+
+ex:Harga1 a gr:UnitPriceSpecification .
+ex:Harga1 gr:hasCurrency "IDR"^^xsd:string .
+ex:Harga1 gr:hasCurrencyValue "6800"^^xsd:integer .
+ex:Harga1 rdfs:seeAlso dbpedia:Indonesian_rupiah .
+
+ex:Headphone1 a gr:Offering .
+ex:Headphone1 gr:name "TaffSTUDIO Splitter Audio Shape U 3.5mm ke Headphone & Mic - K0650" .
+ex:Headphone1 gr:hasPriceSpecification ex:Harga1 .
+ex:Headphone1 rdfs:seeAlso dbpedia:Mobile_phone .
+
+ex:GudangGrosir gr:offers ex:Headphone1 .
+
+
+## Data 2
+ex:SoundSquare a gr:BusinessEntity .
+dbpedia:Jakarta a gr:Location .
+ex:SoundSquare schema:location dbpedia:Jakarta .
+
+ex:Harga2 a gr:UnitPriceSpecification .
+ex:Harga2 gr:hasCurrency "IDR"^^xsd:string .
+ex:Harga2 gr:hasCurrencyValue "83200"^^xsd:integer .
+ex:Harga2 rdfs:seeAlso dbpedia:Indonesian_rupiah .
+ex:Headphone2 rdfs:seeAlso dbpedia:Mobile_phone .
+ex:Headphone2 a gr:Offering .
+ex:Headphone2 gr:name "TaffSTUDIO Mikrofon Kondenser Studio dengan Shockproof Mount - BM-800" .
+ex:Headphone2 gr:hasPriceSpecification ex:Harga2 .
+
+ex:SoundSquare gr:offers ex:Headphone2 .
+
+
+## Data 1
+ex:Computindo a gr:BusinessEntity .
+dbpedia:Jakarta a gr:Location .
+ex:Computindo schema:location dbpedia:Jakarta .
+
+ex:Harga3 a gr:UnitPriceSpecification .
+ex:Harga3 gr:hasCurrency "IDR"^^xsd:string .
+ex:Harga3 gr:hasCurrencyValue "459100"^^xsd:integer .
+ex:Harga3 rdfs:seeAlso dbpedia:Indonesian_rupiah .
+
+ex:Headphone3 a gr:Offering .
+ex:Headphone3 gr:name "Zjiang Printer Resep Thermal Bluetooth - ZJ-5802DD" .
+ex:Headphone3 gr:hasPriceSpecification ex:Harga3 .
+ex:Headphone3 rdfs:seeAlso dbpedia:Mobile_phone .
+
+ex:Computindo gr:offers ex:Headphone3 .
